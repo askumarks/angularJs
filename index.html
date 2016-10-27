@@ -2,12 +2,25 @@
 <html>
 <head>
 	<title>Angular Learning</title>
-	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
 	<script type="text/javascript" src="index.js"></script>
 </head>
 <body ng-app="myApp">
-
+	<div class="container">
+		<header class="jumbotron">
+			<h1>Angular Js Sample</h1>
+		</header>
+		<div class="row">
+			<div class="col-sm-3">
+				<quick-links><quick-links>
+			</div>
+			<div class="col-sm-9">
+				<div ng-view></div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

@@ -3,7 +3,8 @@ var app = angular.module("myApp", ["ngRoute"]);
 app.config(function($routeProvider){
 	$routeProvider
 	.when('/binding',{
-		templateUrl : 'templates/binding.html'
+		templateUrl : 'templates/binding.html',
+		controller : "bindCtrl"
 	})
 	.when('/contorllers',{
 		templateUrl: 'templates/controllers.html'
@@ -25,4 +26,9 @@ app.directive('quickLinks', function(){
 			]
 		}
 	}
+});
+
+app.controller("bindCtrl", function($scope){
+	$scope.name = "aswanth";
+
 });

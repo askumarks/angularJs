@@ -18,6 +18,13 @@ app.config(function($routeProvider){
 
 	.when('/validation',{
 		templateUrl: 'templates/validation.html',
+		templateUrl : 'templates/filters.html',
+		controller : "newc"
+	})
+	.when('/form',{
+		templateUrl:'templates/form.html',
+		controller:"formcontrol"
+	})
 		controller : "bindCtrl2"
 
 
@@ -31,12 +38,14 @@ app.directive('quickLinks', function(){
 	return {
 		restrict: 'E',
 		templateUrl: "templates/quicklinks.html",
-		controller: function($scope){
+	https://github.com/askumarks/angularJs.git	controller: function($scope){
 			$scope.links = [
-				{'label' : 'binding', 'url' : '#binding'},
+				{'label' : 'bindings', 'url' : '#binding'},
 				{'label' : 'controllers', 'url' : '#controllers'},
+				{'label' : 'controllers', 'url' : '#contorllers'},
 				{'label' : 'filters', 'url' : '#filters'},
 				{'label' : 'validation', 'url' : '#validation'}
+				{'label':'Form','url':'#form'}
 				
 			]
 		}
@@ -44,7 +53,14 @@ app.directive('quickLinks', function(){
 });
 
 app.controller("bindCtrl", function($scope){
-	$scope.name = "aswanth";
+	$scope.name = "Jobin Mathew";
+	$scope.profession = "Developer";
+
+});
+app.controller("newc", function($scope){
+	$scope.uname = "Jobin M";
+	$scope.profession = "Developer";
+
 
 });
 app.controller("bindCtrl1", function($scope){

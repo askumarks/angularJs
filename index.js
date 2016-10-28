@@ -13,11 +13,18 @@ app.config(function($routeProvider){
 	.when('/validation',{
 		templateUrl: 'templates/validation.html'
 	
+	.when('/filters',{
+		templateUrl : 'templates/filters.html',
+		controller : "newc"
 	})
 	.when('/filter',{
 		templateUrl: 'templates/filter.html',
 		controller : 'filterCtrlr'
 	
+	.when('/form',{
+		templateUrl:'templates/form.html',
+		controller:"formcontrol"
+	})
 	})
 	.otherwise({
 		templateUrl : 'templates/home.html'
@@ -34,6 +41,10 @@ app.directive('quickLinks', function(){
 				{'label' : 'Controllers', 'url' : '#contorllers'},
 				{'label' : 'Validation', 'url': '#validation'},
 				{'label' : 'Filter', 'url': '#filter'}
+				{'label' : 'bindings', 'url' : '#binding'},
+				{'label' : 'controllers', 'url' : '#contorllers'},
+				{'label' : 'filters', 'url' : '#filters'},
+				{'label':'Form','url':'#form'}
 			]
 		}
 	}
@@ -61,8 +72,6 @@ app.controller("filterCtrlr", function($scope){
 	$scope.orderByMe = function(x) {
         $scope.myOrderBy = x;
     }
-    $scope.convert = function(y) {
-    	$scope.myNum = parseInt(y);
-    }
+    
  
 });

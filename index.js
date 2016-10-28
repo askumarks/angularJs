@@ -10,6 +10,10 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/controllers.html'
 	
 	})
+	.when('/validation',{
+		templateUrl: 'templates/validation.html'
+	
+	})
 	.otherwise({
 		templateUrl : 'templates/home.html'
 	});
@@ -22,13 +26,14 @@ app.directive('quickLinks', function(){
 		controller: function($scope){
 			$scope.links = [
 				{'label' : 'binding', 'url' : '#binding'},
-				{'label' : 'controllers', 'url' : '#contorllers'}
+				{'label' : 'controllers', 'url' : '#contorllers'},
+				{'label' : 'validation', 'url': '#validation'}
 			]
 		}
 	}
 });
 
 app.controller("bindCtrl", function($scope){
-	$scope.name = "aswanth";
+	$scope.name = "Rony & AK";
 
 });

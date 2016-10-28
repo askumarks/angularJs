@@ -10,6 +10,9 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/controllers.html'
 	
 	})
+	.when('/filters',{
+		templateUrl : 'templates/filters.html'
+	})
 	.otherwise({
 		templateUrl : 'templates/home.html'
 	});
@@ -21,14 +24,16 @@ app.directive('quickLinks', function(){
 		templateUrl: "templates/quicklinks.html",
 		controller: function($scope){
 			$scope.links = [
-				{'label' : 'binding', 'url' : '#binding'},
-				{'label' : 'controllers', 'url' : '#contorllers'}
+				{'label' : 'bindings', 'url' : '#binding'},
+				{'label' : 'controllers', 'url' : '#contorllers'},
+				{'label' : 'filters', 'url' : '#filters'}
 			]
 		}
 	}
 });
 
 app.controller("bindCtrl", function($scope){
-	$scope.name = "aswanth";
+	$scope.name = "Jobin";
+	$scope.profession = "Developer";
 
 });

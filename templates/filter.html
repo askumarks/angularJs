@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><h3>Filter and Sorting</h3></div>
+	<ul>
+		  <input name="myInp" ng-model="myInp"><br>
+		  <li ng-repeat="x in names | orderBy:'fName' | filter : myInp">
+		    {{ x.fName + ' ' + x.lName }}
+		  </li>
+	</ul>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><h3>Currency</h3></div>
+	Enter Price:<input name="price" ng-model="price">
+	<h4>Price: {{ price | currency }}</h4>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading"><h3>Sorting on Click</h3></div>
+	<table boreder="1" width="50%">
+		<tr>
+			<th ng-click="orderByMe('fName')"><a href="">First Name</a></th>
+			<th ng-click="orderByMe('lName')"><a href="">Last Name</a></th>
+		</tr>
+		<tr ng-repeat="x in names | orderBy:myOrderBy ">
+			<td>{{x.fName}}</td>
+			<td>{{x.lName}}</td>
+		</tr>
+		
+
+	</table>
+</div>

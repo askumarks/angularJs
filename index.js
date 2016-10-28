@@ -6,12 +6,16 @@ app.config(function($routeProvider){
 		templateUrl : 'templates/binding.html',
 		controller : "bindCtrl"
 	})
-	.when('/contorllers',{
-		templateUrl: 'templates/controllers.html'
+	.when('/expression',{
+		templateUrl: 'templates/expression.html'
 	
 	})
 	.when('/form',{
 		templateUrl : 'templates/form.html',
+		controller : "bindCtrl"
+	})
+	.when('/filter',{
+		templateUrl : 'templates/filter.html',
 		controller : "bindCtrl"
 	})
 	
@@ -27,9 +31,11 @@ app.directive('quickLinks', function(){
 		controller: function($scope){
 			$scope.links = [
 				{'label' : 'binding', 'url' : '#binding'},
-				{'label' : 'controllers', 'url' : '#contorllers'},
-				{'label' : 'form','url':'#form'}
+				{'label' : 'expression', 'url' : '#expression'},
+				{'label' : 'form','url':'#form'},
+				{'label' : 'filter','url':'#filter'}
 			]
+
 		}
 	}
 });
@@ -65,8 +71,23 @@ app.directive("passwordVerify", function() {
    };
 });
 
+
 app.controller("bindCtrl", function($scope){
 	$scope.name = " ";
 	$scope.pwd="";
 	$scope.confirmpwd="";
+	$scope.list= [
+        'Jani',
+        'Carl',
+        'Margareth',
+        'Hege',
+        'Joe',
+        'Gustav',
+        'Birgit',
+        'Mary',
+        'Kai' 
+        ];
+     $scope.price = 58;
+   
+
 });

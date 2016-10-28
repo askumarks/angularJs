@@ -10,6 +10,9 @@ app.config(function($routeProvider){
 		templateUrl: 'templates/controllers.html'
 	
 	})
+	.when('/validation',{
+		templateUrl: 'templates/validation.html'
+	
 	.when('/filters',{
 		templateUrl : 'templates/filters.html',
 		controller : "newc"
@@ -31,6 +34,7 @@ app.directive('quickLinks', function(){
 			$scope.links = [
 				{'label' : 'bindings', 'url' : '#binding'},
 				{'label' : 'controllers', 'url' : '#contorllers'},
+				{'label' : 'validation', 'url': '#validation'},
 				{'label' : 'filters', 'url' : '#filters'},
 				{'label':'Form','url':'#form'}
 			]

@@ -1,0 +1,36 @@
+<p>Validation</p>
+
+
+
+<div class="panel panel-default">
+	<div class="panel-heading">Enter your details</div>
+	<div class="panel-body">
+	
+
+	<form name="myForm">
+	<p>Name:
+		<input name="myName" ng-model="myName" required>
+		<span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required.</span>
+		<h1>{{myForm.myInput.$valid}}</h1>
+
+	<p>Email:
+		<input name="email" type="email" ng-model="email.text" required>
+		<span class="error" ng-show="myForm.email.$error.required">*</span>
+    	<span class="error" ng-show="myForm.email.$error.email">Not valid email!</span>
+    </p>
+    <p>Password:
+    	<input name="password" type="password" ng-model="myPass" required>
+    	<span class="error" ng-show="myForm.password.$error.required">*</span>
+    </p>
+   	<p>Confirm Password:
+    	<input name="otherPassword" type="password" ng-model="myOPass" required compareTo="myPass">
+    	<span class="error" ng-show="myForm.otherPassword.$error.required">*</span>
+    	<span>{{myForm.password.$viewValue==myForm.otherPassword.$viewValue?'':'Passwords do not match.' }} </span>
+   	</p>
+   	<p>
+		<input type="submit">
+	</p>
+	</form>
+
+	</div>
+</div>

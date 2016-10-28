@@ -6,9 +6,21 @@ app.config(function($routeProvider){
 		templateUrl : 'templates/binding.html',
 		controller : "bindCtrl"
 	})
-	.when('/contorllers',{
+	.when('/controllers',{
 		templateUrl: 'templates/controllers.html'
 	
+	})
+	.when('/filters',{
+		templateUrl: 'templates/filters.html',
+		controller : "bindCtrl1"
+
+	})
+
+	.when('/validation',{
+		templateUrl: 'templates/validation.html',
+		controller : "bindCtrl2"
+
+
 	})
 	.otherwise({
 		templateUrl : 'templates/home.html'
@@ -22,7 +34,10 @@ app.directive('quickLinks', function(){
 		controller: function($scope){
 			$scope.links = [
 				{'label' : 'binding', 'url' : '#binding'},
-				{'label' : 'controllers', 'url' : '#contorllers'}
+				{'label' : 'controllers', 'url' : '#controllers'},
+				{'label' : 'filters', 'url' : '#filters'},
+				{'label' : 'validation', 'url' : '#validation'}
+				
 			]
 		}
 	}
@@ -30,5 +45,18 @@ app.directive('quickLinks', function(){
 
 app.controller("bindCtrl", function($scope){
 	$scope.name = "aswanth";
+
+});
+app.controller("bindCtrl1", function($scope){
+	$scope.name = "";
+
+});
+
+app.controller("bindCtrl2", function($scope){
+	$scope.firstName = "";
+	$scope.lastName = "";
+	$scope.email = "";
+	$scope.phoneNumber = "";
+
 
 });

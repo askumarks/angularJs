@@ -1,0 +1,27 @@
+<div>
+<form name="myForm" class="myForm" required>
+<p><label>First Name:</label>
+  <input type="text" name="firstName" ng-model="firstName" required />
+  <span ng-show="myForm.firstName.$touched && myForm.firstName.$invalid"> The  first name is required.</span>
+</p>
+
+<p><label>Last Name:</label>
+  <input type="text" name="lastName" ng-model="lastName" required />
+  <span ng-show="myForm.lastName.$touched && myForm.lastName.$invalid"> The last name is required.</span>
+</p>
+ 
+<p><label>Email:   </label>
+  <input type="email" name="userEmail" ng-model="email" required />	
+  <span ng-show="myForm.userEmail.$touched && myForm.userEmail.$invalid"> Follow mail-id format.</span>
+</p>
+  
+<p><label>Phone:  </label>
+  <input type="number" name="phoneNumber" ng-model="phoneNumber" ng-minlength="10" required />
+  <span ng-show="myForm.phoneNumber.$touched && myForm.phoneNumber.$invalid">Phone number field cannot be empty.</span>
+ <span ng-if="!myForm.phoneNumber.$valid">Mobile number should include 10 digits.</span>
+
+
+</p>
+	
+</form>
+</div>

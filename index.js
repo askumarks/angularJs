@@ -13,10 +13,16 @@ app.config(function($routeProvider){
 	.when('/form',{
 		templateUrl : 'templates/form.html',
 		controller : "bindCtrl"
+	.when('/filters',{
+		templateUrl : 'templates/filters.html',
+		controller : "newc"
 	})
 	.when('/filter',{
 		templateUrl : 'templates/filter.html',
 		controller : "bindCtrl"
+	.when('/form',{
+		templateUrl:'templates/form.html',
+		controller:"formcontrol"
 	})
 	
 	.otherwise({
@@ -30,10 +36,13 @@ app.directive('quickLinks', function(){
 		templateUrl: "templates/quicklinks.html",
 		controller: function($scope){
 			$scope.links = [
-				{'label' : 'binding', 'url' : '#binding'},
+				{'label' : 'bindings', 'url' : '#binding'},
 				{'label' : 'expression', 'url' : '#expression'},
 				{'label' : 'form','url':'#form'},
 				{'label' : 'filter','url':'#filter'}
+				{'label' : 'controllers', 'url' : '#contorllers'},
+				{'label' : 'filters', 'url' : '#filters'},
+				{'label':'Form','url':'#form'}
 			]
 
 		}
@@ -81,6 +90,14 @@ app.controller("bindCtrl", function($scope){
         'Carl',
         'Margareth',
         'Hege',
+	$scope.name = "Jobin Mathew";
+	$scope.profession = "Developer";
+
+});
+app.controller("newc", function($scope){
+	$scope.uname = "Jobin M";
+	$scope.profession = "Developer";
+
         'Joe',
         'Gustav',
         'Birgit',

@@ -49,3 +49,11 @@ app.controller("newc", function($scope){
 
 
 });
+app.controller("formcontrol", function($scope){
+	$scope.name = "";
+	$scope.email = "";
+	$scope.phone = "";
+	$scope.password = "";
+
+
+});

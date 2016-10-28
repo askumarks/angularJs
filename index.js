@@ -8,6 +8,12 @@ app.config(function($routeProvider){
 	})
 	.when('/contorllers',{
 		templateUrl: 'templates/controllers.html'
+
+	
+	})
+	.when('/validators',{
+		templateUrl: 'templates/form.html'
+		
 	
 	})
 	.otherwise({
@@ -22,7 +28,8 @@ app.directive('quickLinks', function(){
 		controller: function($scope){
 			$scope.links = [
 				{'label' : 'binding', 'url' : '#binding'},
-				{'label' : 'controllers', 'url' : '#contorllers'}
+				{'label' : 'controllers', 'url' : '#contorllers'},
+				{'label': 'validators' , 'url':'#validators'}
 			]
 		}
 	}

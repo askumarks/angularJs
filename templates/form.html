@@ -1,0 +1,20 @@
+<div>
+<form name="myForm">
+
+<p>Name:<input type="text" name="myName" ng-model="myName" required >
+<span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required.</span> </p>
+
+
+<p>Username:<input type="text" name="myUsername" ng-model="username"  ng-minlength='4' ng-maxlength='10' required>
+<span ng-show="myForm.myUsername.$error.required">Username is required</span>
+<span ng-show="myForm.myUsername.$error.minlength">Username is too short</span>
+<span ng-show="myForm.myUsername.$error.maxlength">Username is too long</span>
+</p>
+
+ <p>Email:<input type="email" name="email" ng-model="email" required/>
+
+<span ng-show="myForm.email.required">Email is required</span>
+<span ng-show="myForm.email.$error">Invalid email</span>
+</p>
+</form>
+</div>
